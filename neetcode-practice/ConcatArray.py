@@ -41,6 +41,3 @@ def getConcatenation(nums: List[int]) -> List[int]: # without class we take out 
 
 # solution = Solution()
 print(getConcatenation(nums))
-
-
-
