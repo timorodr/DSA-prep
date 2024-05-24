@@ -69,8 +69,8 @@ print(outer("x", "b"))
 # a, b, c = [1, 2, 3]
 # print(a, b, c)
 
-# for i in range(5):
-#     print("1st",i)
+for i in range(5):
+    print("1st",i)
 
 # for i in range(2,6):
 #     print("2nd", i)

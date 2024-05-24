@@ -31,13 +31,17 @@ from typing import List
 
 nums = [1,2,1]
 
-# class Solution:
-def getConcatenation(nums: List[int]) -> List[int]: # without class we take out "self" argument in def
-    ans = []
-    for i in range(2):
-        for num in nums:
-            ans.append(num)
-    return ans
+##** We need to make sure we initialize a new array as the question calls for
+##** We need to loop over each num in nums and append those nums to our ans array
+##** We "for i in range(2)" essentially makes our nested for loop modular and available to run however many times we need within range parameter
 
-# solution = Solution()
-print(getConcatenation(nums))
+class Solution:
+    def getConcatenation(nums: List[int]) -> List[int]: # without class we take out "self" argument in def
+        ans = []
+        for i in range(2):
+            for num in nums:
+                ans.append(num)
+        return ans
+
+solution = Solution()
+print(solution.getConcatenation(nums))
