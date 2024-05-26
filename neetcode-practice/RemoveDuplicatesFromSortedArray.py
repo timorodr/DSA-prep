@@ -66,7 +66,7 @@ from typing import List
 
 
 
-
+## Review dynamic arrays/static arrays 
 
 
 
