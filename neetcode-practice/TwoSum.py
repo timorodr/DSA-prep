@@ -44,7 +44,7 @@ target = 9
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for L in range(len(nums)):
-            for R in range(L + 1, len(nums)):
+            for R in range(L + 1, len(nums)): ## L + 1 always points to the element to the Right of L
                 if nums[L] + nums[R] == target:
                     return [L, R]
         return
