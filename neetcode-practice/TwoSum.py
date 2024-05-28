@@ -52,3 +52,22 @@ class Solution:
 
 solution = Solution()
 print(solution.twoSum(nums, target))
+
+
+##** This is the optimal solution here utilizing a hashmap of previously seen numbers with their index (questions answer calls for indices)
+##** to obtain num and index we neep to use for i, n in enumerate(nums): python loop
+##** We know that there is exactly one solution.
+
+class Solution2:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        seen = {} # create the hashmap
+
+        for i, n in enumerate(nums):
+            diff = target - n ## this way we are able to eventually see if the diff is in the hashmap already
+            if diff in seen: ## if the difference is in our HM
+                return [seen[diff], i]
+            seen[n] = i ## if the current (num) key is not in HM we want to add it in and assign its value as i
+        return 
+
+solution2 = Solution2()
+print(solution2.twoSum(nums, target))

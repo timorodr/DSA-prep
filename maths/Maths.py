@@ -30,32 +30,32 @@
 # print(arr)
 # print(arr[0][0], arr[3][3])
 
-class MyClass:
-    # Constructor
-    def __init__(self, nums):
-        # Create member variables
-        self.nums = nums
-        self.size = len(nums)
+# class MyClass:
+#     # Constructor
+#     def __init__(self, nums):
+#         # Create member variables
+#         self.nums = nums
+#         self.size = len(nums)
     
-    # self key word required as param
-    def getLength(self):
-        return self.size
+#     # self key word required as param
+#     def getLength(self):
+#         return self.size
 
-    def getDoubleLength(self):
-        return 2 * self.getLength()
+#     def getDoubleLength(self):
+#         return 2 * self.getLength()
 
-myObj = MyClass([1, 2, 3])
-print(myObj.getLength())
-print(myObj.getDoubleLength())
+# myObj = MyClass([1, 2, 3])
+# print(myObj.getLength())
+# print(myObj.getDoubleLength())
 
-def outer(a, b):
-    c = "c"
+# def outer(a, b):
+#     c = "c"
 
-    def inner():
-        return a + b + c
-    return inner()
+#     def inner():
+#         return a + b + c
+#     return inner()
 
-print(outer("x", "b"))
+# print(outer("x", "b"))
 
 # nums1 = [1, 3, 5]
 # nums2 = [2, 4, 6]
@@ -69,8 +69,8 @@ print(outer("x", "b"))
 # a, b, c = [1, 2, 3]
 # print(a, b, c)
 
-for i in range(5):
-    print("1st",i)
+# for i in range(5):
+#     print("1st",i)
 
 # for i in range(2,6):
 #     print("2nd", i)
@@ -100,3 +100,8 @@ for i in range(5):
 # arr2 = [1, 2, 3, 4]
 # print(arr2[1:3])
 # #[2,3]
+    
+
+prevMap = {4:0, 1:1, 9:2, 7:3}
+
+print(prevMap[9])

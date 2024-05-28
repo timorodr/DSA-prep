@@ -46,7 +46,7 @@ class Solution2:
     def containsDuplicate(self, nums: List[int]) -> bool:
         hashset = set()
 
-        for n in nums:
+        for n in nums: ## remember this iterates over nums length 
             if n in hashset:
                 return True
             hashset.add(n)
@@ -54,3 +54,15 @@ class Solution2:
     
 solution2 = Solution2()
 print(solution2.containsDuplicate(nums))
+
+
+##** Possibly easiest solution syntax wise would be below
+##** Sets do not contain duplicates therefore if the length of the set differs from the length of the array then we can
+##** assume a duplicate present in array
+
+class Solution3:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        return len(set(nums)) != len(nums)
+    
+solution3 = Solution3()
+print(solution3.containsDuplicate(nums))
