@@ -71,3 +71,4 @@ class Solution2:
 
 solution2 = Solution2()
 print(solution2.twoSum(nums, target))
+
