@@ -36,7 +36,7 @@ nums = [1,2,1]
 ##** We "for i in range(2)" essentially makes our nested for loop modular and available to run however many times we need within range parameter
 
 class Solution:
-    def getConcatenation(nums: List[int]) -> List[int]: # without class we take out "self" argument in def
+    def getConcatenation(self, nums: List[int]) -> List[int]: # without class we take out "self" argument in def
         ans = []
         for i in range(2):
             for num in nums:
