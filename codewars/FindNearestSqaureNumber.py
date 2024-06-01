@@ -14,5 +14,4 @@ def nearest_sq(n):
 print(nearest_sq(111))
 
 
-# POP API
-# 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 
+
