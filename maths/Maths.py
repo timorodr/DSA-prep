@@ -102,6 +102,9 @@
 # #[2,3]
     
 
-prevMap = {4:0, 1:1, 9:2, 7:3}
+# prevMap = {4:0, 1:1, 9:2, 7:3}
 
-print(prevMap[9])
+# print(prevMap[9])
+
+print(10000 % 1001)
+print([list()] * 1000)
