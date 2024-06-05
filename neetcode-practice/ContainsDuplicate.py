@@ -66,3 +66,28 @@ class Solution3:
     
 solution3 = Solution3()
 print(solution3.containsDuplicate(nums))
+
+
+
+
+
+
+# nums2 = [1,1,1,3,3,4,3,2,4,2] ## True
+# nums2 = [1,2,3,4,2,22,3,4,5,9] # False
+nums2 = [1,2,3,4,2]
+
+class Repition:
+    def containsDuplicate(self, nums2: List[int]) -> bool:
+        seen = set()
+
+        for num in nums2:
+            if num in seen:
+                return True
+            seen.add(num)
+            print(seen)
+        return False
+
+    
+
+repitiion = Repition()
+print(repitiion.containsDuplicate(nums2))

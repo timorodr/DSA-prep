@@ -76,7 +76,8 @@ nums = [0,0,1,1,1,2,2,3,3,4]
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         L = 1
-        for R in range(1, len(nums)): ## make sure 1st argument starts where L starts as well
+        
+        for R in range(1, len(nums)):
             if nums[R] != nums[R - 1]:
                 nums[L] = nums[R]
                 L += 1
@@ -86,3 +87,8 @@ class Solution:
 solution = Solution()
 print(solution.removeDuplicates(nums))
 print(nums)
+
+
+
+
+

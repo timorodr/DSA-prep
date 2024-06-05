@@ -43,5 +43,21 @@ class Solution:
                 ans.append(num)
         return ans
 
-solution = Solution()
-print(solution.getConcatenation(nums))
+# solution = Solution()
+# print(solution.getConcatenation(nums))
+
+
+nums = [1,2,1,2,1,2222,3]
+
+
+class Concat:
+    def answer_concat(self, nums: List[int]) -> List[int]:
+        #create array of ans
+        ans = []
+        for i in range(2):
+            for num in nums:
+                ans.append(num)
+        return ans
+    
+solution = Concat()
+print(solution.answer_concat(nums))

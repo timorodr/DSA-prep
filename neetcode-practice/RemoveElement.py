@@ -45,8 +45,28 @@ from typing import List
 ##** We want to keep track of where "val" is in order to replace val with array value that is not Val
 ##** We should do so by initializing "k" as 0 to keep track of index in array and manually move/increment k as we run a loop that finds "val" in array
 
+
+
+# class Solution:
+#     def removeElement(self, nums: List[int], val: int) -> int:
+#         k = 0
+
+#         for i in range(len(nums)):
+#             if nums[i] != val:
+#                 nums[k] = nums[i]
+#                 k += 1
+#         return k
+    
+# solution = Solution()
+# print(solution.removeElement(nums, val))
+# print(nums)
+
+
+
+
 nums = [0,1,2,2,3,0,4,2]
 val = 2
+
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
@@ -57,7 +77,11 @@ class Solution:
                 nums[k] = nums[i]
                 k += 1
         return k
-    
+
+
+
+
+
 solution = Solution()
 print(solution.removeElement(nums, val))
 print(nums)
