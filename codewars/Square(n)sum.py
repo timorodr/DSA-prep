@@ -31,3 +31,9 @@ def square_sum(numbers):
     return sum(ans)
 
 print(square_sum(numbers))
+
+
+# ** OR
+
+def square_sum(numbers):
+    return sum(x ** 2 for x in numbers)
