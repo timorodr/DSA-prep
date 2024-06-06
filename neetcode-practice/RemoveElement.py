@@ -85,3 +85,25 @@ class Solution:
 solution = Solution()
 print(solution.removeElement(nums, val))
 print(nums)
+
+
+nums2 = [0,1,2,2,3,0,4,2]
+val2 = 2
+
+
+class Solution2:
+    def removeElement(self, nums2: List[int], val: int) -> int:
+        k = 0
+
+        for i in range(len(nums2)):
+            if nums2[i] != val:
+                nums2[k] = nums2[i]
+                k += 1
+        return k
+
+
+
+
+solution2 = Solution2()
+print(solution2.removeElement(nums2, val2))
+print(nums2)

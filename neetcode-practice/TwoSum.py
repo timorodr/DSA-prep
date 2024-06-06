@@ -50,8 +50,8 @@ class Solution:
         return
     
 
-solution = Solution()
-print(solution.twoSum(nums, target))
+# solution = Solution()
+# print(solution.twoSum(nums, target))
 
 
 ##** This is the optimal solution here utilizing a hashmap of previously seen numbers with their index (questions answer calls for indices)
@@ -69,6 +69,26 @@ class Solution2:
             seen[n] = i ## if the current (num) key is not in HM we want to add it in and assign its value as i
         return 
 
-solution2 = Solution2()
-print(solution2.twoSum(nums, target))
+# solution2 = Solution2()
+# print(solution2.twoSum(nums, target))
 
+
+
+
+nums2 = [15,1,10,5,9,2,3,3,7]
+target2 = 9
+
+class Solution2:
+    def twoSum(self, nums2: List[int], target2: int) -> List[int]:
+        seen = {}
+
+        for i, n in enumerate(nums2):
+            diff = target - n
+            if diff in seen:
+                return [seen[diff], i]
+            seen[n] = i
+        return
+
+
+solution2 = Solution2()
+print(solution2.twoSum(nums2, target2))
