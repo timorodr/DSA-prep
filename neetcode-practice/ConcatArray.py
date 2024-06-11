@@ -47,7 +47,7 @@ class Solution:
 # print(solution.getConcatenation(nums))
 
 
-nums = [1,2,1,2,1,2222,3]
+nums = [1,2,1]
 
 
 class Concat:
@@ -59,5 +59,6 @@ class Concat:
                 ans.append(num)
         return ans
     
+
 solution = Concat()
 print(solution.answer_concat(nums))
