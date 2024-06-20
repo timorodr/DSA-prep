@@ -40,3 +40,4 @@ class Solution:
         return maxP # return our maximum profit
     
 ##** There is another solution that is more straight forward than this
+#* more pracitce on two pointers
