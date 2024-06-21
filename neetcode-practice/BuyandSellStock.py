@@ -41,3 +41,7 @@ class Solution:
     
 ##** There is another solution that is more straight forward than this
 #* more pracitce on two pointers
+    
+class Solution2:
+    def maxProfit2(self, prices2: List[int]) -> int:
+        
