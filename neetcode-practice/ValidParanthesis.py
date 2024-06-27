@@ -49,7 +49,19 @@
 s = "()[]{}"
 
 class Solution:
-    
+    def isValid(self, s: str) -> bool:
+        stack = []
+        lookup = {")": "(", "]":"[", "}":"{"}
+
+        for paranthesis in s:
+            if paranthesis in lookup.values():
+                stack.append(paranthesis)
+            elif stack and stack[-1] == lookup[paranthesis]:
+               stack.pop()
+            else:
+                return False
+        return stack == []
+
     
 
 solution = Solution()
