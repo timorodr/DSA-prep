@@ -25,23 +25,39 @@
 # 0 <= prices[i] <= 104
 from typing import List
 
+
+prices = [7,1,5,3,6,4]
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         l, r = 0, 1 # initialize our pointers values
         maxP = 0 # keep track of our max profits
 
-        while r < len(prices): # initialize R pointer to run length of loop
+        while r < len(prices): # initialize R pointer to run length prices
             if prices[l] < prices[r]: # have to check if our prices that we are selling at is greater than the price we are buying at
                 profit = prices[r] - prices[l] # calc the difference of Right pointer SELL and left pointer BUY
                 maxP = max(maxP, profit) # get the max of what our max Profit is so far and profit for that iteration of loop
-            else:
-                l = r # if prices[l] is greater than r then we have to set the L pointer to the R position 
-            r += 1 # and update the posistion of R as well to the next value
+            else: # if our R pointer is Less than our Left 
+                l = r # if prices[l] is greater than r then we have to set the L pointer to the R position because we found a new low
+            r += 1 # and update the posistion of R as well to the next value regardless of con, we need to have R go through entire list
         return maxP # return our maximum profit
+    
+solution = Solution()
+print(solution.maxProfit(prices))
     
 ##** There is another solution that is more straight forward than this
 #* more pracitce on two pointers
     
-class Solution2:
-    def maxProfit2(self, prices2: List[int]) -> int:
-        
+# class Solution2:
+#     def maxProfit2(self, prices2: List[int]) -> int:
+#         L, R = 0, 1
+#         maxP = 0
+
+#         while R < len(prices2):
+#             if prices2[L] < prices2[R]:
+#                 profit = prices2[R] - prices2[L]
+#                 maxP = max(maxP, profit)
+#             else:
+#                 L = R
+#             R += 1
+#         return maxP
