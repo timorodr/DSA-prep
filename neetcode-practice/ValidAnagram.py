@@ -30,16 +30,26 @@
 s = "rats"
 t = "tar"
 
+from collections import Counter
+
+# class Solution:
+#     def isAnagram(self, s: str, t: str) -> bool:
+#         sorted_s = sorted(s)
+#         sorted_t = sorted(t)
+
+#         if sorted_s == sorted_t:
+#             return True
+#         else:
+#             return False
+    
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        sorted_s = sorted(s)
-        sorted_t = sorted(t)
+        print(Counter(s)) # Counter creates a hashmap and keeps track of each number of a characters occurences
+        return Counter(s) == Counter(t)
 
-        if sorted_s == sorted_t:
-            return True
-        else:
-            return False
-    
+
+
+
 solution = Solution()
 print(solution.isAnagram(s, t))
