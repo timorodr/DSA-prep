@@ -33,3 +33,8 @@ class Solution:
             return False
         elif str(x)[::-1] == str(x):
             return True
+        
+
+# Follow up: check if palindrom number without converting to string. In this instance, we would 
+# have to (in a round about way) mod every number and divide every number for however large the number is 
+# to check the placing of each digit 
