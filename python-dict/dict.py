@@ -1,4 +1,9 @@
+from collections import defaultdict
+
+
+
 person = {"name": "Tim", "age": 29, "city": "San Antonio"}
+
 
 # looping through just accesses keys
 
@@ -21,3 +26,14 @@ if key_name in person.keys():
     print("city name is", person[key_name])
 else:
     print("Key not found")
+
+res_list = defaultdict(list)
+res_int = defaultdict(int)
+res_string = defaultdict(str)
+
+res_list["hello"].append("world")
+res_int["hello"] = 5
+res_string["hello"] = "mars"
+print(res_list, "LIST")
+print(res_int, "INT")
+print(res_string, "STRING")
