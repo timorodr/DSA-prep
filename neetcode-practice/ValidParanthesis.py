@@ -66,3 +66,6 @@ class Solution:
 
 solution = Solution()
 print(solution.isValid(s))
+
+
+# as per stream more practice with stacks is needed.
