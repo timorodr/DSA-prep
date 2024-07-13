@@ -27,14 +27,20 @@
 
 #* Pretty simple, just have to convert int to str to reverse the string and compare. less than 0 will always be false as (-) negative will never be in correct position
 
+x = 21
+
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        if x < 0:
-            return False
-        elif str(x)[::-1] == str(x):
-            return True
+        if x > 0:
+            if str(x) == str(x)[::-1]:
+                return True
+            else:
+                return False
+        return False
         
 
+solution = Solution()
+print(solution.isPalindrome(x))
 # Follow up: check if palindrom number without converting to string. In this instance, we would 
 # have to (in a round about way) mod every number and divide every number for however large the number is 
 # to check the placing of each digit 
