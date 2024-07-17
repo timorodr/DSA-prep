@@ -47,6 +47,8 @@ class Solution:
 solution = Solution()
 print(solution.topKFrequent(nums, k))
 
+## revisit after ec2 deployment
+
 ## create a hashmap of each num in nums and set its frequency to the key of that num.
 ## create a freq array USING BUCKET SORT [[], [], [], [], []] 
 ## basically the frequency list is a list where each value is also a list.
