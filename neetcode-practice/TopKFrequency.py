@@ -48,6 +48,7 @@ solution = Solution()
 print(solution.topKFrequent(nums, k))
 
 ## revisit after ec2 deployment
+## nginx and gunicorn active but 502 bad gateway error present
 
 ## create a hashmap of each num in nums and set its frequency to the key of that num.
 ## create a freq array USING BUCKET SORT [[], [], [], [], []] 
