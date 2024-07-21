@@ -28,3 +28,5 @@ class Solution:
             if haystack[i: i + len(needle)] == needle: # slices a substring in haystack starting at i until the length of needle +1 bc not inclusive is equal to the string needle
                 return i #return the index we started on to complete the sequence and check for substring
         return -1
+    
+# loop through then conditional  haystack slice if it is equal to slice
