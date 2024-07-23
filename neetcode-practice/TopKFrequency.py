@@ -3,6 +3,8 @@
  
 
 # Example 1:
+# nums = [1,1,1,2,2,3]
+# k = 2
 
 # Output: [1,2]
 # Example 2:
@@ -20,6 +22,37 @@
  
 
 # Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
+# nums = [1,1,1,2,2,3]
+# k = 2
+
+# from typing import List
+
+# class Solution:
+#     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+#         top_seen = {}
+#         freq = [[] for i in range(len(nums) + 1)]
+
+#         for num in nums:
+#             top_seen[num] = top_seen.get(num, 0) + 1
+        
+#         for number, count in top_seen.items():
+#             freq[count].append(number)
+        
+#         res = []
+
+#         for i in range(len(freq) -1, 0, -1):
+#             for num in freq[i]:
+#                 res.append(num)
+#                 if len(res) == k:
+#                     return res
+        
+
+
+
+
+
+
+
 nums = [1,1,1,2,2,3]
 k = 2
 
@@ -29,13 +62,13 @@ class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         top_seen = {}
         freq = [[] for i in range(len(nums) + 1)]
-
+        
         for num in nums:
             top_seen[num] = top_seen.get(num, 0) + 1
         
         for number, count in top_seen.items():
             freq[count].append(number)
-        
+
         res = []
 
         for i in range(len(freq) -1, 0, -1):
@@ -43,7 +76,8 @@ class Solution:
                 res.append(num)
                 if len(res) == k:
                     return res
-        
+
+
 solution = Solution()
 print(solution.topKFrequent(nums, k))
 
