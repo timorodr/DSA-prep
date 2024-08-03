@@ -45,19 +45,20 @@ from collections import defaultdict
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        cols = defaultdict(set)
+        cols = defaultdict(set) # create dicts for cols rows and squares that are sets as to not have duplicates
         rows = defaultdict(set)
-        squares = defaultdict(set)
+        squares = defaultdict(set) #remember to create a 3x3 square we need to (r // 3, c // 3)
 
-        for c in range(9):
+        for c in range(9): # 0-8 index creates 9 values
             for r in range(9):
-                if board[r][c] == ".":
+                if board[r][c] == ".": # continue until we dont have empty cell
                     continue
                 if (board[r][c] in cols[c] or 
                     board[r][c] in rows[r] or 
-                    board[r][c] in squares[(r // 3, c // 3)]):
+                    board[r][c] in squares[(r // 3, c // 3)]): # checks specific point on board and if that value is already in our cols
+                    #rows or squares
                     return False
-                cols[c].add(board[r][c])
+                cols[c].add(board[r][c]) # if not in cols rows or squares we add it to them as key cols[c] etc.,
                 rows[r].add(board[r][c])
                 squares[(r // 3, c // 3)].add(board[r][c])
         return True
