@@ -41,3 +41,5 @@ class Solution:
                 res.append(s[j + 1: j + 1 + length])
                 i = j + 1 + length
         return res
+    
+##* very important to remember that we properly use python splice to grab values we want then update position of i
