@@ -11,6 +11,7 @@
 # Example 1:
 
 # Input: nums = [1,7,3,6,5,6]
+#                      ^
 # Output: 3
 # Explanation:
 # The pivot index is 3.
@@ -33,7 +34,7 @@
 
 from typing import List
 
-nums = [2,1,-1]
+nums = [1,7,3,6,5,6]
 
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
@@ -43,6 +44,7 @@ class Solution:
 
         for i in range(len(nums)): # we loop through the values in the list and create a rightSum  to compare to the leftsum
            rightSum = total - nums[i] - leftSum # our right sum is the total minus the current value and what we've already seen in the list
+           # 28 - 1 - 0 27
            if leftSum == rightSum: # compares sides and retruns index if equal
                return i
            leftSum += nums[i] # if not equal then we add the value were on in the loop to the leftsum

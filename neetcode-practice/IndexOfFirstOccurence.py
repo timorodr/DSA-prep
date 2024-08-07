@@ -4,7 +4,7 @@
 
 # Example 1:
 
-haystack = "sadbutsad"
+haystack = "asdfsadbutsad"
 
 needle = "sad"
 # Output: 0
@@ -29,4 +29,6 @@ class Solution:
                 return i #return the index we started on to complete the sequence and check for substring
         return -1
     
+solution = Solution()
+print(solution.strStr(haystack, needle))
 # loop through then conditional  haystack slice if it is equal to slice
