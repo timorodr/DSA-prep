@@ -29,22 +29,32 @@
 
 from typing import List
 
-nums = list(range(0, 1001))
-target = 325
+arr = [17,18,5,4,6,1]
 
 class Solution:
-    def find_target(self, nums: List[int], target: int) -> int:
-        l, r = 0, len(nums) - 1
+    def find_target(self, arr: List[int]) -> List[int]:
+        rightMax = -1
 
-        while l <= r:
-            m = (l + r) // 2
-            if nums[m] > target:
-                r = m - 1
-            elif nums[m] < target:
-                l = m + 1
-            else:
-                return m
-        return -1
+        for i in range(len(arr) -1, -1, -1):
+            newMax = max(rightMax, arr[i])
+            arr[i] = rightMax
+            rightMax = newMax
+        return arr
+
+
     
 solution = Solution()
-print(solution.find_target(nums, target))
+print(solution.find_target(arr))
+
+
+
+
+arr = [17,18,5,4,6,1]
+
+rightMax = -1
+
+for i in range(len(arr) -1, -1, -1):
+    newMax = max(rightMax, arr[i]) # either 1 or -1 // either 1 or 6 // either 6 or 4
+    arr[i] = rightMax # last index initially is -1 // arr[i] is now 6 // keep 6 
+    rightMax = newMax # right max is now 1 // right max 6 // still 6 so one and so forth
+return arr
