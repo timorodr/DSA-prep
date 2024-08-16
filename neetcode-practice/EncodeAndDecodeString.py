@@ -43,3 +43,31 @@ class Solution:
         return res
     
 ##* very important to remember that we properly use python splice to grab values we want then update position of i
+
+
+
+
+
+class Solution:
+
+    def encode(self, strs: List[str]) -> str:
+        res = ""
+
+        for word in strs:
+            res += str(len(word)) + "#" + word
+        return res
+
+    def decode(self, s: str) -> List[str]:
+        res = []
+        i = 0
+
+        while i < len(s):
+            j = i
+            while j != "#":
+                j += 1
+                length = int(s[i:j])
+                res.append(s[j + 1: j + 1 + length])
+                i = j + 1 + length
+        return res
+    
+# remember to use 2 pointers to solve. J to find # and i to get the length of the word to append
