@@ -60,9 +60,9 @@ from typing import List
 
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        top_seen = {}
         freq = [[] for i in range(len(nums) + 1)]
-        
+        top_seen = {}
+       
         for num in nums:
             top_seen[num] = top_seen.get(num, 0) + 1
         
