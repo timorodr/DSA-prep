@@ -66,3 +66,5 @@ class Solution:
 
 solution = Solution()
 print(solution.isValidSudoku(board))
+
+#remember to loop through range of 9 for r and c and add board position
