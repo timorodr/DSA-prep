@@ -29,6 +29,7 @@ from typing import List
 nums = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
 target = 9
 
+
 #** Essentially Binary search halves the available ascending order list and identifies which half of the list the target is in
 #** and searches/havles that portion , repeating the process until the target is found/ or to see if it is in the list
 
@@ -44,11 +45,11 @@ target = 9
 
 class Solution:
     def find_target(self, nums: List[int], target: int) -> int:
-        l, r = 0, len(nums) - 1
+        l, r = 0, len(nums) - 1 # initialize variables at 0-index and last-index
 
-        while l <= r:
-            m = (l + r) // 2
-            if nums[m] > target:
+        while l <= r: # loop through array until l = r
+            m = (l + r) // 2 # initialize variable to find middle of list
+            if nums[m] > target: #compare middle value of list to target and move pointers either to right or left half based on if less than or greater than target
                 print(m)
                 r = m - 1
             elif nums[m] < target:

@@ -72,7 +72,7 @@ ops = ["5","2","C","D","+"]
 
 class Solution:
     def calPoints(self, operations: List[str]) -> int:
-        stack = []
+        stack = [] # stack is best data structure for removing elements off end of stack and perf ops on previous values
 
         for op in operations:
             if op == "+":
@@ -84,6 +84,7 @@ class Solution:
             else:
                 stack.append(int(op))
         return sum(stack)
+            
     
 solution = Solution()
 print(solution.calPoints(ops))
