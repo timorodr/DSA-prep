@@ -35,20 +35,20 @@ class Solution2:
         res = []
         nums.sort()
 
-        for i, num in enumerate(nums):
+        for i, num in enumerate(nums): # loop through index and value checking if 1-index is true and if its the same as previous then continue
             if i > 0 and num == nums[i - 1]:
                 continue
             
-            l, r = i + 1, len(nums) - 1
-            while l < r:
+            l, r = i + 1, len(nums) - 1 # create variables for 1-index and last index
+            while l < r: # loop as long as l<r and create a 3sum variable that is the values of all 3 added together
                 threeSum = num + nums[l] + nums[r]
-                if threeSum > 0:
+                if threeSum > 0: # based on 3sum value we decrement or increment bc the nums are sorted
                     r -= 1
                 elif threeSum < 0:
                     l += 1
                 else:
-                    res.append([num, nums[l], nums[r]])
+                    res.append([num, nums[l], nums[r]]) # if 3sum = 0 then we append to our res and move l to the next index
                     l += 1
-                    while l < r and nums[l] == nums[l - 1]:
+                    while l < r and nums[l] == nums[l - 1]: # we loop and make sure that l isnt same as previous value we just used - if it is then we move l 1-index until it is unique value
                         l += 1
         return res
